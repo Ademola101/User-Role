@@ -4,8 +4,8 @@ const User = require('../models/User');
 
 const loginController = async (req, res) => {
   const { username, password } = req.body;
-  const user = User.findOne({ username });
-
+  const user = await User.findOne({ username });
+  console.log(user);
   const passwordCorrect = user === null ? false : await bcrypt.compare(password, user.passwordHash);
 
   if (!(passwordCorrect && user)) {

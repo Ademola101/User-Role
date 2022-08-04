@@ -13,10 +13,11 @@ const createUser = async (req, res) => {
     passwordHash,
   });
 
+  const savedUser = await newUser.save();
   res.status(201).json({
     success: true,
     message: 'created',
-    data: newUser,
+    data: savedUser,
   });
 };
 
