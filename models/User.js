@@ -13,6 +13,12 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+
+  role: {
+    type: String,
+    enum: ['user', 'staff', 'manager', 'admin'],
+    default: 'user',
+  },
 });
 
 userSchema.set('toJSON', {
