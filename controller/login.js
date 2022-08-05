@@ -53,5 +53,10 @@ const adminLogin = async (req, res) => {
     id: user._id,
 
   };
+  const token = jwt.sign(userForToken, process.env.SECRET);
+
+  res.status(200).json({
+    token, username: user.username, name: user.name,
+  });
 };
 module.exports = { loginController, adminLogin };
