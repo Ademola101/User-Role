@@ -10,7 +10,11 @@ A user with admin role can login to the system through the admin login route.
 
 A user with no admin role cannot login to the system through the admin login route.
 
-![Successful Login with token](./screenshots/admin-fail.png)
+![Fail Login with token](./screenshots/admin-fail.png)
+
+A user can login to the system through the user login route.
+
+![Successful Login with token](./screenshots/user-sucess.png)
 
 ### Prerequisite
 
